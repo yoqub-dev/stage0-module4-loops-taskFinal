@@ -2,23 +2,20 @@ package school.mjc.stage0.loops.finalTask;
 
 public class Pyramid {
     public void printPyramid(int cathetusLength) {
-        int currentNumber = 1;
         for (int i = 1; i <= cathetusLength; i++) {
             // Print spaces for alignment
             for (int j = 1; j <= cathetusLength - i; j++) {
                 System.out.print("  "); // Using two spaces for alignment
             }
 
-            // Print left side of the pyramid
-            for (int j = 1; j <= i; j++) {
-                System.out.print(currentNumber + " ");
-                currentNumber++;
+            // Print decreasing numbers
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
             }
 
-            // Print right side of the pyramid
+            // Print increasing numbers starting from 2
             for (int j = 2; j <= i; j++) {
-                System.out.print(currentNumber + " ");
-                currentNumber++;
+                System.out.print(j + " ");
             }
 
             // Move to the next line for the next row
